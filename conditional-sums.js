@@ -1,16 +1,14 @@
 const conditionalSum = function (values, condition) {
   // Your code here
-  let evnTotal = 0;
-  let oddTotal = 0;
+  let total = 0;
+  const isOdd = condition === "odd" ? true : false;
 
   for (el of values) {
-    if (el % 2 === 0) {
-      evnTotal += el;
-    } else {
-      oddTotal += el;
+    if (el % 2 == isOdd) {
+      total += el;
     }
   }
-  return condition === "even" ? evnTotal : oddTotal;
+  return total;
 };
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even")); //6
