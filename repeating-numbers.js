@@ -1,6 +1,5 @@
 const repeatNumbers = (data) => {
   let result = "";
-  console.log(data.length);
   for (let k = 0; k < data.length; k++) {
     for (let i = 0; i < data[k][1]; i++) {
       result += data[k][0].toString();
