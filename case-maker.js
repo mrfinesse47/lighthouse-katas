@@ -8,7 +8,7 @@ const camelCase = function (input) {
 
       inputArray[i + 1] = String.fromCharCode(
         inputArray[i + 1].codePointAt(0) - 32
-      );
+      ); //im assuming everything is lower case otherwise would bug fix
     }
   }
 
