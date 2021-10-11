@@ -3,7 +3,6 @@ const repeatNumbers = (data) => {
   console.log(data.length);
   for (let k = 0; k < data.length; k++) {
     for (let i = 0; i < data[k][1]; i++) {
-      console.log(data[k][0]);
       result += data[k][0].toString();
     }
     if (k < data.length - 1) {
