@@ -6,7 +6,12 @@ const chooseRecipe = function (bakeryA, bakeryB, recipes) {
       hasIngredient(recipie.ingredients, bakeryA) &&
       hasIngredient(recipie.ingredients, bakeryB)
     ) {
-      result = recipie;
+      if (
+        hasIngredient(recipie.ingredients, bakeryA) !==
+        hasIngredient(recipie.ingredients, bakeryB)
+      )
+        //to make sure we are picking different ingredients from the 2 different bakeries
+        result = recipie;
     }
   });
   return result.name;
@@ -16,16 +21,16 @@ const hasIngredient = (ingredients, bakery) => {
   //console.log(ingredients);
   for (let i = 0; i < ingredients.length; i++) {
     for (let j = 0; j < bakery.length; j++) {
-      if (ingredients[i] === ingredients[j]) {
-        return true;
+      if (ingredients[i] === bakery[j]) {
+        return ingredients[i];
       }
     }
   }
   return false;
 };
 
-let bakeryA = ["saffron", "eggs", "tomato paste", "coconut", "custard"];
-let bakeryB = ["milk", "butter", "cream cheese"];
+let bakeryA = ["coconut", "saffron", "eggs", "tomato paste", "custard"];
+let bakeryB = ["milk", "butter", "cream cheese", "coconut"];
 let recipes = [
   {
     name: "Coconut Sponge Cake",
