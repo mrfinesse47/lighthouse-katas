@@ -1,5 +1,5 @@
 const chooseRecipe = function (bakeryA, bakeryB, recipes) {
-  let result = 0; //if it goes to 2 it has matched for both bakery
+  let result;
 
   recipes.forEach((recipie) => {
     if (
