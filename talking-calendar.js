@@ -1,5 +1,5 @@
 const talkingCalendar = function (date) {
-  const dateArray = date.split("/").map((date) => Number(date)); //makes an array of numbers
+  const dateArray = date.split("/").map(Number); //makes an array of numbers
 
   return (
     numToMonth(dateArray[1]) +
