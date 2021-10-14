@@ -23,6 +23,7 @@ const calculateChange = function (total, cash) {
         }
         changeObj[denominations[i].name] += 1;
         remainder -= denominations[i].value;
+
         i = -1;
       }
     }
