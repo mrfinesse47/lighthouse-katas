@@ -40,17 +40,17 @@ const queenThreat = (generatedBoard) => {
 
   //if the are on the same line left to right or up and down
   if (xCoord[0] === xCoord[1]) {
-    console.log("line");
+    // console.log("line");
     return true;
   }
   if (yCoord[1] === yCoord[0]) {
-    console.log("line");
+    // console.log("line");
     return true;
   }
 
   //if on the  same diagonal
   if (Math.abs(xCoord[1] - xCoord[0]) === Math.abs(yCoord[1] - yCoord[0])) {
-    console.log("diagonal");
+    // console.log("diagonal");
     return true;
   }
   //if no match
